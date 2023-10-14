@@ -4,12 +4,30 @@
 class square():
     """square class"""
 
-    width = 0
-    height = 0
+    def __init__(self, width, height):
+        """initiazation of class"""
+        self.width = width
+        self.height = height
 
-    def __init__(self, *args, **kwargs):
-        for key, value in kwargs.items():
-            setattr(self, key, value)
+    @property
+    def width(self):
+        """width getter"""
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """width setter"""
+        self.__width = value
+
+    @property
+    def height(self):
+        """height getter"""
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """height setter"""
+        self.__height = value
 
     def area_of_my_square(self):
         """ Area of the square """
